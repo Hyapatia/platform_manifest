@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+<remote name="skunk" fetch="https://github.com/skunkworkx/" />
+
+<project path="vendor/hardware_overlay" name="vendor_hardware_overlay" remote="skunk" revision="o8.1" />
+<project path="device/phh/treble" name="device_phh_treble" remote="skunk" revision="o8.1" />
+<project path="vendor/vndk" name="vendor_vndk" remote="skunk" revision="o8.1" />
+<project path="vendor/vndk-tests" name="vendor_vndk-tests" remote="skunk" revision="o8.1" />
+
+<remove-project name="platform/build" />
+<project path="build/make" name="platform_build" remote="skunk" revision="o8.1">
+    <copyfile dest="Makefile" src="core/root.mk" />
+    <linkfile dest="build/CleanSpec.mk" src="CleanSpec.mk" />
+    <linkfile dest="build/buildspec.mk.default" src="buildspec.mk.default" />
+    <linkfile dest="build/core" src="core" />
+    <linkfile dest="build/envsetup.sh" src="envsetup.sh" />
+    <linkfile dest="build/target" src="target" />
+    <linkfile dest="build/tools" src="tools" />
+</project>
+
+<remove-project name="platform/system/core" />
+<project path="system/core" name="platform_system_core" remote="skunk" revision="o8.1" />
+
+<remove-project name="platform/system/sepolicy" />
+<project path="system/sepolicy" name="platform_system_sepolicy" remote="skunk" revision="o8.1" />
+
+<remove-project name="platform/frameworks/native" />
+<project path="frameworks/native" name="platform_frameworks_native" remote="skunk" revision="o8.1" />
+
+<remove-project name="platform/system/vold" />
+<project path="system/vold" name="platform_system_vold" remote="skunk" revision="o8.1" />
+
+<remove-project name="platform/system/bt" />
+<project path="system/bt" name="platform_system_bt" remote="skunk" revision="o8.1" />
+
+<remove-project name="platform/external/selinux" />
+<project path="external/selinux" name="platform_external_selinux" remote="skunk" revision="o8.1" />
+
+<remove-project name="platform/frameworks/base" />
+<project path="frameworks/base" name="platform_frameworks_base" remote="skunk" revision="o8.1" />
+
+<remove-project name="platform/frameworks/av" />
+<project path="frameworks/av" name="platform_frameworks_av" remote="skunk" revision="o8.1" />
+
+<remove-project name="platform/frameworks/opt/telephony" />
+<project path="frameworks/opt/telephony" name="platform_frameworks_opt_telephony" remote="skunk" revision="o8.1" />
+
+
+</manifest>
