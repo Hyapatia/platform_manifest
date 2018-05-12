@@ -50,5 +50,8 @@
     
 <remove-project name="platform/system/libvintf" />
 <project path="system/libvintf" name="platform_system_libvintf" remote="skunk" revision="o8.1" />
+    
+<remove-project name="platform/bionic" />
+<project path="bionic" name="platform_bionic" remote="skunk" revision="o8.1" />
 
 </manifest>
