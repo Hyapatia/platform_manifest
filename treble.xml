@@ -10,7 +10,7 @@
 <project path="vendor/vndk-tests" name="vendor_vndk-tests" remote="skunk" revision="o8.1" />
 
 <remove-project name="platform/build" />
-<project path="build/make" name="platform_build" remote="skunk" revision="o8.1">
+<project path="build/make" name="platform_build" remote="skunk" revision="bliss-o8.1">
     <copyfile dest="Makefile" src="core/root.mk" />
     <copyfile dest="build.sh" src="core/scripts/build.sh" />
     <linkfile dest="build/CleanSpec.mk" src="CleanSpec.mk" />
