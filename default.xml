@@ -626,5 +626,6 @@
 
   <include name="opengapps.xml" />
   <include name="treble.xml" />
+  <include name="bliss.xml" />
   
 </manifest>
